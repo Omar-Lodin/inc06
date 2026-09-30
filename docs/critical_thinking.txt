@@ -1,0 +1,9 @@
+It uses size.shortestSide * 0.40 and is positioned with respect to the 
+center and radius so that when the orientation switches from portrait 
+to landscape the image does not distort. The face does not fill the screen 
+since it is fixed to a (300, 300) grid however. 
+
+ShouldRepaint should return true when the mood changes because the painter 
+needs to be signaled to redraw the face with a new expression or color. when
+the input stays the same it returns false so that it does not unnecessarily 
+perform work doing a new drawing.
